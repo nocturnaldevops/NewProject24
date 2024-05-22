@@ -25,4 +25,9 @@ pipeline
             }
         }
     }
+    post{
+        failure{
+            mail bcc: '', body: 'The project failed', cc: '', from: '', replyTo: '', subject: 'project failed', to: 'projects2488@gmail.com'
+        }
+    }
 }
