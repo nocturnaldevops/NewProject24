@@ -30,12 +30,6 @@ pipeline
             sh 'echo "testing passed"'
         }
     }
-    stage("cont_delivery")
-    {
-        steps{
-            deploy adapters: [tomcat9(credentialsId: '6d11be8e-81a2-4fa1-ba9c-c87973654792', path: '', url: 'http://172.31.26.124:8080')], contextPath: 'appv1', war: '**/*.war'
-        }
-    }
 }
    post{
         failure{
