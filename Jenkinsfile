@@ -14,7 +14,7 @@ pipeline
         {
             steps
             {
-                sh 'mvn packagee'
+                sh 'mvn package'
             }
         }
         stage("contDeploy")
