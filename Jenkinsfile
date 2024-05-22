@@ -7,14 +7,14 @@ pipeline
         {
             steps
             {
-                git branch: 'mainn', url: 'https://github.com/nocturnaldevops/NewProject24.git'
+                git branch: 'main', url: 'https://github.com/nocturnaldevops/NewProject24.git'
             }
         }
         stage("contBuild")
         {
             steps
             {
-                sh 'mvn package'
+                sh 'mvn packagee'
             }
         }
         stage("contDeploy")
