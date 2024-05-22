@@ -10,5 +10,12 @@ pipeline
                 git branch: 'main', url: 'https://github.com/nocturnaldevops/NewProject24.git'
             }
         }
+        stage("contBuild")
+        {
+            steps
+            {
+                sh 'mvn package'
+            }
+        }
     }
 }
